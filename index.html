@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/png" href="xd.png">
+  <link rel="icon" type="image/png" href="xd.png">
     <title>Seminars@Xidian</title>
     <style>
         /* General styles */
@@ -100,7 +100,12 @@
             margin: 30px 0;
         }
 
-
+.subdivider {
+    width: 100%; /* 分割线的宽度，可以设置为固定宽度 */
+    height: 0.5px; /* 设置分割线的高度（粗细） */
+    background-color: #333333; /* 000设置分割线的颜色 */
+    margin: 20px 0; /* 给上下加一些间距 */
+}
 
 
         
@@ -147,9 +152,7 @@
     font-weight: bold;
     color: #555;
 }
-
-
-        
+   
 
         /* Sections (hidden by default) */
         .content {
@@ -160,6 +163,10 @@
         .content.active {
             display: block;
         }
+
+
+
+
         
 
     </style>
@@ -172,6 +179,7 @@
     <!-- Navigation Bar -->
     <div class="navbar">
         <a href="#home" class="active" onclick="showSection('home')">Home</a>
+        <a href="#learning" onclick="showSection('learning')">Learning Seminars</a>
         <a href="#past" onclick="showSection('past')">Past Seminars</a>
         <a href="#contact" onclick="showSection('contact')">Contact</a>
     </div>
@@ -191,9 +199,6 @@
         </div>
 
         <div class="divider"></div>
-
-
-
         
 <div class="schedule"> Schedule (2025 January--June) </div>
 
@@ -302,6 +307,41 @@
 
 
 
+    
+    
+    <!-- Learning Section -->
+    <div class="content" id="learning">
+        <div class="header">
+            <h1>Learning Seminars</h1>
+            <p>In addition to the research seminar, we will also be organizing a learning seminar in various topics for graduate students interested in Combinatorics & Information Theory.</p>
+        </div>
+ 
+  <div class="divider"></div>
+        
+
+
+<div class="seminar-list">
+    <div class="seminar-item">
+        
+<div class="schedule"> 
+    Post-Quantum Cryptography (PQC) (2024 Sep.--Dec.) 
+</div>
+       
+<div class="subdivider"></div>
+        <p><span>Organizer:</span> <a href="https://taozhang220.github.io/" target="_blank">Tao Zhang</a></p>
+        <p><span>Speaker:</span> Chengfei Xie </p>
+        <p><span>Time:</span> Thursday, 9:30am--11:30am UTC</p>
+        <p><span>Location:</span> Cybersecurity Innovation Building A-1236（网络安全创新大楼12楼A-1236）</p>
+        <p><span>Reference:</span> lectures on geometry of numbers (B. Friedman)</p>
+    </div>
+ </div>
+        
+    </div>
+
+
+
+    
+
     <!-- Past Seminar Section -->
 <div class="content" id="past">
     <div class="header">
@@ -332,6 +372,8 @@
 
     </div>
 </div>
+
+
 
 <!-- JavaScript for Accordion -->
 <script>
@@ -408,6 +450,8 @@
 
 
 </style>
+
+
 
 
 
