@@ -179,6 +179,7 @@
     <!-- Navigation Bar -->
     <div class="navbar">
         <a href="#home" class="active" onclick="showSection('home')">Home</a>
+        <a href="#problem" onclick="showSection('problem')">Problem Discussion</a>
         <a href="#learning" onclick="showSection('learning')">Learning Seminars</a>
         <a href="#past" onclick="showSection('past')">Past Seminars</a>
         <a href="#contact" onclick="showSection('contact')">Contact</a>
@@ -304,7 +305,112 @@
     </div>
 
 
+    <!-- Problem Discussion Section -->
+<div class="content" id="past">
+    <div class="header">
+        <h1>Problem Sharing & Discussion</h1>
+        <p>In this seminar, a volunteer will share an interesting problem, then everyone will engage in a discussion around it.</p>
+    </div>
+    
+ <div class="divider"></div>
+    
+    <div class="accordion">
+        <!-- 2024 Section -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                2024 Problem Sharing & Discussion
+            </div>
+            <div class="accordion-content">
+                               <p><span>Date:</span> TBA</p>
+           <p><span>Speaker:</span> TBA</p>
+           <p><span>Title:</span>TBA </p>
+                <hr>
+              <p><span>Date:</span> TBA</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+            </div>
+        </div>
 
+    </div>
+</div>
+
+
+
+<!-- JavaScript for Accordion -->
+<script>
+    function toggleAccordion(header) {
+        const content = header.nextElementSibling;
+        const allContents = document.querySelectorAll('.accordion-content');
+
+        // Close other accordion items
+        allContents.forEach(section => {
+            if (section !== content) {
+                section.style.display = 'none';
+            }
+        });
+
+        // Toggle current section
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+    
+</script>
+
+    
+<!-- CSS Styles for Accordion -->
+<style>
+    
+/* Past Seminars Accordion Styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+}
+
+.accordion-item {
+    width: 70%; /* Set accordion sections to 80% width */
+    margin-bottom: 15px; /* Increase spacing between items */
+    background-color: #f9f9f9; /* #f9f9f9 Light gray for entire item */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Smooth edges */
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.accordion-header {
+    background-color: #6e8b6e; /* Slightly darker gray for header background */
+    padding: 20px; /* Increase padding for more space */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #d3d3d3; /* Divider line below header */
+    text-align: left; /* Align header text to the left */
+}
+
+.accordion-header:hover {
+    background-color: #9acd9a; /* F5F5F5 Slightly darker gray on hover */
+}
+
+.accordion-content {
+    padding: 20px; /* Increase padding for more vertical spacing */
+    display: none; /* Initially hidden */
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.accordion-content hr {
+    border: none;
+    border-top: 1px solid #d3d3d3; /* Subtle divider */
+    margin: 15px 0;
+}
+
+
+</style>
 
 
     
